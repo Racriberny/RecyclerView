@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         inicializarDatos();
         RecyclerView recyclerView = findViewById(R.id.rcView);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(new AdaptadorCountry(datos));
+        recyclerView.setAdapter(new AdaptadorCountry(datos, this));
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
     }
 
